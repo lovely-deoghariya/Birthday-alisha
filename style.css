@@ -1,0 +1,138 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff4d94,#8b5cf6,#1e3a8a);
+height:100vh;
+overflow:hidden;
+color:#fff;
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.page.active{
+display:flex;
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:scale(.9);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+.glass{
+width:90%;
+max-width:420px;
+padding:35px;
+border-radius:30px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(18px);
+border:2px solid rgba(255,255,255,.3);
+box-shadow:0 0 40px rgba(255,105,180,.4);
+text-align:center;
+}
+
+h1{
+font-size:42px;
+font-weight:700;
+color:#fff;
+margin-bottom:10px;
+}
+
+h2{
+font-size:30px;
+color:#ffd54f;
+margin-bottom:15px;
+}
+
+h3{
+font-size:22px;
+color:#ff9ecf;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+color:#fff;
+margin-top:15px;
+}
+
+button{
+margin-top:25px;
+padding:14px 35px;
+border:none;
+border-radius:50px;
+background:linear-gradient(90deg,#ff4d94,#8b5cf6);
+color:#fff;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px hotpink;
+}
+
+.cake{
+font-size:90px;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-15px);
+}
+}
+
+.emoji{
+font-size:42px;
+margin-top:20px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.2);
+}
+}
+
+.bg-hearts::before{
+content:"❤️ 💖 💕 ❤️ 💖 💕 ❤️ 💖";
+position:fixed;
+top:-80px;
+left:0;
+width:100%;
+font-size:28px;
+opacity:.4;
+animation:fall 12s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px);
+}
+100%{
+transform:translateY(110vh);
+}
+}
